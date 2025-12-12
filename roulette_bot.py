@@ -6,7 +6,9 @@ import os
 import random
 
 # ------------ CONFIG ------------
-TOKEN = "ADD_TOKEN"  # <-- put your bot token here
+import os
+TOKEN = os.getenv("TOKEN")
+
 PREFIX = "!"
 CASHIER_ROLE_NAME = "Cashier"           # role that can add chips
 
@@ -419,3 +421,4 @@ async def commands_cmd(ctx):
 if __name__ == "__main__":
     load_chips()
     bot.run(TOKEN)
+
